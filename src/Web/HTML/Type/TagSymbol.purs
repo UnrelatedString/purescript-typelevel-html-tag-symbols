@@ -1,11 +1,19 @@
 module Web.HTML.Type.TagSymbol
   ( class SpecialTagSymbol
-  , class TagSymbol
+  --, class TagSymbol
   , SpecialTagSymbols
-  , TagSymbols
+  --, TagSymbols
   ) where
 
+import Prim.Row as Row
 import Web.HTML
+import Web.HTML.HTMLHtmlElement (HTMLHtmlElement)
+
+-- | A class providing a sealed bijection between tag names and interface types.
+class SpecialTagSymbol :: Symbol -> Type -> Constraint
+class SpecialTagSymbol symbol elem
+
+instance Row.Cons symbol elem r SpecialTagSymbols => SpecialTagSymbol symbol elem
 
 -- | A mapping from tag names to
 -- | the corresponding types which provide bindings to interfaces
@@ -32,12 +40,8 @@ type SpecialTagSymbols =
   , head :: HTMLHeadElement 
   , heading :: HTMLHeadingElement 
   , html :: HTMLHtmlElement 
-  , hyperlink :: HTMLHyperlinkElementUtils 
   , iframe :: HTMLIFrameElement 
   , image :: HTMLImageElement 
-  , image :: HTMLImageElement.CORSMode 
-  , image :: HTMLImageElement.DecodingHint 
-  , image :: HTMLImageElement.Laziness 
   , input :: HTMLInputElement 
   , keygen :: HTMLKeygenElement 
   , li :: HTMLLIElement 
@@ -46,9 +50,6 @@ type SpecialTagSymbols =
   , link :: HTMLLinkElement 
   , map :: HTMLMapElement 
   , media :: HTMLMediaElement 
-  , media :: HTMLMediaElement.CanPlayType 
-  , media :: HTMLMediaElement.NetworkState 
-  , media :: HTMLMediaElement.ReadyState 
   , meta :: HTMLMetaElement 
   , meter :: HTMLMeterElement 
   , mod :: HTMLModElement 
@@ -80,7 +81,6 @@ type SpecialTagSymbols =
   , time :: HTMLTimeElement 
   , title :: HTMLTitleElement 
   , track :: HTMLTrackElement 
-  , track :: HTMLTrackElement.ReadyState 
   , ulist :: HTMLUListElement 
   , video :: HTMLVideoElement 
   )

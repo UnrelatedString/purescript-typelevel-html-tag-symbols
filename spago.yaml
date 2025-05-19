@@ -1,6 +1,6 @@
 package:
   name: typelevel-html-tag-symbols
-  description: Literally just a typeclass relating HTML tag names to the corresponding element types
+  description: Literally just a mapping from HTML tag names to the corresponding element interface types
   dependencies:
     - prelude: ">=6.0.2 <7.0.0"
     - web-html: ">=4.1.0 <4.2.0" # I feel like literally any addition is breaking
