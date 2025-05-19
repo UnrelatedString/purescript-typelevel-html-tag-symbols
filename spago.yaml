@@ -1,5 +1,5 @@
 package:
-  name: purescript-typelevel-html-tag-symbols
+  name: typelevel-html-tag-symbols
   description: Literally just a typeclass relating HTML tag names to the corresponding element types
   dependencies:
     - prelude: ">=6.0.2 <7.0.0"

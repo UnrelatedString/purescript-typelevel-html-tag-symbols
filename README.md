@@ -4,4 +4,4 @@
 
 # purescript-typelevel-html-tag-symbols
 
-Literally just a typeclass relating HTML tag names to the corresponding element types. Not closed/sealed--I trust you have your reasons ;)
+Literally just a mapping between HTML tag names and the corresponding element types.
