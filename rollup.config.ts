@@ -17,7 +17,7 @@ const config = (args: Record<string, any>): RollupOptions => ({
             ],
         }),
         html({
-            title: "HTML Interfaces",
+            title: "HTML Tags And Interfaces",
             meta: [
                 { charset: 'utf-8' },
                 { property: 'og:type', content: 'website' },
