@@ -9,9 +9,10 @@ import Prim.Row as Row
 import Web.HTML
 import Web.HTML.HTMLHtmlElement (HTMLHtmlElement)
 
--- | A class providing a sealed bijection between tag names and interface types.
+-- | A class providing a sealed mapping from tag names to interface types.
 class SpecialTagSymbol :: Symbol -> Type -> Constraint
 class SpecialTagSymbol symbol elem
+  | symbol -> elem
 
 instance Row.Cons symbol elem r SpecialTagSymbols => SpecialTagSymbol symbol elem
 
@@ -29,7 +30,7 @@ type SpecialTagSymbols =
   , body :: HTMLBodyElement 
   , button :: HTMLButtonElement 
   , canvas :: HTMLCanvasElement 
-  , dlist :: HTMLDListElement 
+  , dl :: HTMLDListElement 
   , data :: HTMLDataElement 
   , datalist :: HTMLDataListElement 
   , div :: HTMLDivElement 
@@ -38,12 +39,17 @@ type SpecialTagSymbols =
   , form :: HTMLFormElement 
   , hr :: HTMLHRElement 
   , head :: HTMLHeadElement 
-  , heading :: HTMLHeadingElement 
+  , h1 :: HTMLHeadingElement
+  , h2 :: HTMLHeadingElement
+  , h3 :: HTMLHeadingElement
+  , h4 :: HTMLHeadingElement
+  , h5 :: HTMLHeadingElement
+  , h6 :: HTMLHeadingElement
   , html :: HTMLHtmlElement 
   , iframe :: HTMLIFrameElement 
   , image :: HTMLImageElement 
   , input :: HTMLInputElement 
-  , keygen :: HTMLKeygenElement 
+  , keygen :: HTMLKeygenElement -- this isn't on MDN ;_;
   , li :: HTMLLIElement 
   , label :: HTMLLabelElement 
   , legend :: HTMLLegendElement 
@@ -52,8 +58,9 @@ type SpecialTagSymbols =
   , media :: HTMLMediaElement 
   , meta :: HTMLMetaElement 
   , meter :: HTMLMeterElement 
-  , mod :: HTMLModElement 
-  , olist :: HTMLOListElement 
+  , ins :: HTMLModElement 
+  , del :: HTMLModElement
+  , ol :: HTMLOListElement 
   , object :: HTMLObjectElement 
   , optgroup :: HTMLOptGroupElement 
   , option :: HTMLOptionElement 
