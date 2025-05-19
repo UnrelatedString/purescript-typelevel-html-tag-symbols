@@ -2,13 +2,13 @@
   "name": "tags-interfaces",
   "version": "0.1.0",
   "description": "Tags, DOM Interfaces, and what's what for what",
-  "homepage": "https://github.com/UnrelatedString/purescript-typelevel-html-tag-symbols/tree/help/help#readme",
+  "homepage": "https://github.com/UnrelatedString/tags-interfaces/tree/main/help#readme",
   "bugs": {
-    "url": "https://github.com/UnrelatedString/purescript-typelevel-html-tag-symbols/issues"
+    "url": "https://github.com/UnrelatedString/tags-interfaces/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UnrelatedString/purescript-typelevel-html-tag-symbols.git"
+    "url": "git+https://github.com/UnrelatedString/tags-interfaces.git"
   },
   "license": "AGPL-3.0-or-later",
   "author": "UnrelatedString",
@@ -18,6 +18,7 @@
     "postinstall": "spago install -p help",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
+    "generate": "cargo run",
     "build": "spago build -p help && rollup -c rollup.config.ts --configPlugin typescript",
     "serve": "spago build -p help && rollup -c rollup.config.ts --configPlugin typescript --configServe",
     "test": "spago test -p help"
