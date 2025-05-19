@@ -1,0 +1,6 @@
+package:
+  name: html-tag-interfaces-help
+  description: A website that just tells you what tags correspond to what interfaces
+  dependencies:
+    - prelude
+    - typelevel-html-tag-symbols
