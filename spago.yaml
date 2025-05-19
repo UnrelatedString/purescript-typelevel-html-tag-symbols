@@ -1,5 +1,5 @@
 package:
-  name: typelevel-html-tag-symbols
+  name: web-html-named-tags
   description: Literally just a mapping from HTML tag names to the corresponding element interface types
   dependencies:
     - prelude: ">=6.0.2 <7.0.0"

@@ -9,6 +9,12 @@ import Prim.Row as Row
 import Web.HTML
 import Web.HTML.HTMLHtmlElement (HTMLHtmlElement)
 
+-- come to think of it this should also just...
+
+foreign import data HTMLTag :: Symbol -> Type
+
+-- and then have class stuff for the interfaces from that and ughhhhh then I need to rename the package to NOT say typelevel and afhadjfh ajkgfherak;g h;erakg herkaghjn;erjkaghnj;keraqhngipuj[erqhngiujperhgnpiejraugnhbpre;jhng;kjrdhgnk;j]
+
 -- | A class providing a sealed mapping from tag names to interface types.
 class SpecialTagSymbol :: Symbol -> Type -> Constraint
 class SpecialTagSymbol symbol elem
