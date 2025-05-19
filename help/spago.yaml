@@ -7,4 +7,3 @@ package:
     - effect
     - halogen
     - halogen-css
-    - typelevel-html-tag-symbols

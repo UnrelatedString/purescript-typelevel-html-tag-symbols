@@ -9,8 +9,7 @@
             "effect",
             "halogen",
             "halogen-css",
-            "prelude",
-            "typelevel-html-tag-symbols"
+            "prelude"
           ],
           "build_plan": [
             "aff",
@@ -79,7 +78,6 @@
             "transformers",
             "tuples",
             "type-equality",
-            "typelevel-html-tag-symbols",
             "typelevel-prelude",
             "unfoldable",
             "unsafe-coerce",
@@ -100,7 +98,7 @@
           "build_plan": []
         }
       },
-      "typelevel-html-tag-symbols": {
+      "web-html-named-tags": {
         "path": "./",
         "core": {
           "dependencies": [
