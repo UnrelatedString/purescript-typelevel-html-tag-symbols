@@ -5,7 +5,7 @@ import terser from '@rollup/plugin-terser';
 import copy from 'rollup-plugin-copy';
 
 const config = (args: Record<string, any>): RollupOptions => ({
-	input: 'src/index.mjs',
+	input: 'help/src/index.mjs',
 	output: {
 		dir: 'dist',
 		format: 'es'

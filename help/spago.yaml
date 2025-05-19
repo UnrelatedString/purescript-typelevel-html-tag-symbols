@@ -3,4 +3,8 @@ package:
   description: A website that just tells you what tags correspond to what interfaces
   dependencies:
     - prelude
+    - css
+    - effect
+    - halogen
+    - halogen-css
     - typelevel-html-tag-symbols
