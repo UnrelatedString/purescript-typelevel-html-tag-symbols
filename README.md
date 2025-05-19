@@ -5,3 +5,5 @@
 # purescript-typelevel-html-tag-symbols
 
 Literally just a mapping between HTML tag names and the corresponding element types.
+
+Except there's also a whole little website for serving the data from [the Living Standard](https://html.spec.whatwg.org/multipage/) because there's no way I'm the first person to run into this problem...

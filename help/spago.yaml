@@ -1,5 +1,5 @@
 package:
-  name: html-tag-interfaces-help
+  name: help
   description: A website that just tells you what tags correspond to what interfaces
   dependencies:
     - prelude

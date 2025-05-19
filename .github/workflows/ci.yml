@@ -2,7 +2,7 @@ name: CI
 on: [push]
 
 jobs:
-  test:
+  lib-test:
     runs-on: ubuntu-latest
     
     steps:
@@ -12,9 +12,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .spago
-          key: spago-${{ hashFiles('spago.lock') }}
+          key: spago-lib-${{ hashFiles('spago.lock') }}
           restore-keys: |
-            spago-
+            spago-lib-
 
       - name: Set up Node 20
         uses: actions/setup-node@v4
@@ -27,10 +27,10 @@ jobs:
           npm i -g spago@next
 
       - name: Install Spago dependencies
-        run: spago fetch --pure -v
+        run: spago fetch --pure -v -p typelevel-html-tag-symbols
 
       - name: Build
-        run: spago build --strict
+        run: spago build --strict -p typelevel-html-tag-symbols
 
       - name: Test
-        run: spago test --strict
+        run: spago test --strict -p typelevel-html-tag-symbols
